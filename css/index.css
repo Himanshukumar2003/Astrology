@@ -702,7 +702,8 @@ footer .section-title {
 }
 
 .profile-img {
-    max-height: 370PX;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     
     cursor: pointer;
@@ -879,7 +880,7 @@ color: var(--color_warning);
 
 
 .profile-image {
-    width: 100%;
+    max-height: 370PX;
     border-radius: 10px;
     object-fit:contain;
 }
