@@ -17,6 +17,21 @@ function scroll() {
 scroll();
 
 
+var swiper = new Swiper(".gallery-slider", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 }
+    }
+});
+
 
 
 function animateNumbers() {
@@ -61,3 +76,5 @@ $(document).ready(function () {
         }, 200);
     });
 });
+
+

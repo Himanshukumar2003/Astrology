@@ -8,8 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>
 
 <body>
@@ -719,6 +721,61 @@
         </div>
     </div>
 
+    <div class="section">
+        <div class="container">
+            <div class="heading-section text-center mb-4">
+                <h2>Our Gallery</h2>
+                <img src="/img/1.png" class="img-fluid">
+                <p>Explore our collection of mystical moments and spiritual ceremonies captured through the lens of
+                    Vedic traditions.</p>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper gallery-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="img/gallery/1-4.png" data-fancybox="gallery">
+                            <img src="img/gallery/1-4.png" class="img-fluid" alt="Image 1">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/gallery/2-3.png" data-fancybox="gallery">
+                            <img src="img/gallery/2-3.png" class="img-fluid" alt="Image 2">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/gallery/2-4.png" data-fancybox="gallery">
+                            <img src="img/gallery/2-4.png" class="img-fluid" alt="Image 3">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/gallery/3-3.png" data-fancybox="gallery">
+                            <img src="img/gallery/3-3.png" class="img-fluid" alt="Image 4">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/gallery/4-3.png" data-fancybox="gallery">
+                            <img src="img/gallery/4-3.png" class="img-fluid" alt="Image 5">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/gallery/1-3.png" data-fancybox="gallery">
+                            <img src="img/gallery/1-3.png" class="img-fluid" alt="Image 6">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="img/gallery/1-3-300x200.png" data-fancybox="gallery">
+                            <img src="img/gallery/1-3-300x200.png" class="img-fluid" alt="Image 7">
+                        </a>
+                    </div>
+                </div>
+                <!-- Swiper Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <div class="row">
@@ -842,6 +899,14 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/4.0.27/fancybox.umd.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Fancybox.bind("[data-fancybox=gallery]", {});
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
