@@ -702,8 +702,7 @@ footer .section-title {
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
+    max-height: 370PX;
     border-radius: 50%;
     
     cursor: pointer;
