@@ -477,12 +477,6 @@ font-weight: 500;
     object-fit: cover;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
 
 .divider-container {
     display: flex;
@@ -932,15 +926,16 @@ color: var(--color_warning);
 
 
 .vedic-card {
-    border: 1px solid var(--color_warning);
     border-radius: 20px;
     text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     height: 100%;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 .vedic-card:hover {
     transform: translateY(-5px);
+
 }
 .vedic-card img {
   width: 100%;
@@ -1383,12 +1378,7 @@ color: var(--color_white);
 }
 
 
-.section-title {
-    font-family: var(--font_one);
-    font-weight: 700;
-    color: var(--darck_black);
-    margin-bottom: 0.5rem;
-}
+
 
 .section-divider {
     height: 3px;
