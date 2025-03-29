@@ -80,7 +80,7 @@
 
                         <p> Whether it’s issues related to business, health, or relationships, by using Vedic astrology
                             solutions, you can improve your life.</p>
-                        <button class="btn mt-3">BOOK AN APPOINTMENT</button>
+                        <button class="btn-video btn mt-3">BOOK AN APPOINTMENT</button>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 text-center">
@@ -518,7 +518,202 @@
 
         </div>
     </div>
+    <div class="section">
+        <div class="container">
+            <div  class="d-flex " style="justify-content: center; align-items: center;  margin-top: 70px;">
+            <div class="book-call-section bg-1  p-4">
+                <div class="row">
+                    <!-- Profile Section -->
+                    <div class="col-md-4 consultant-info">
+                        <div class="profile-img-section">
+                            <img src="img/rakesh-sharma-2.png" alt="Consultant Profile" class="profile-image">
+                        </div>
+                        <h3 class="consultant-name"> Acharya Rakesh Sharma</h3>
+                        <p class="consultant-title">Business Consultant</p>
+                        <div>
+                            <span class="expertise-tag">Strategy</span>
+                            <span class="expertise-tag">Growth</span>
+                        </div>
+                    </div>
+    
+                    <!-- Call to Action Section -->
+                    <div class="col-md-8">
+                        <h2 >Book a Call</h2>
+                        <div class="section-divider"></div>
+                        <p>
+                            Schedule a one-on-one consultation with our expert to discuss your business needs.
+                            Whether you prefer an audio or video call, we're here to help you achieve your goals
+                            and provide personalized solutions for your business challenges.
+                        </p>
+    
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#" class="btn btn-call btn-audio"  onclick="openModal('Book an Audio Call')">
+                                <i class="fas fa-phone-alt me-2"></i> Book a Audio Call
+                            </a>
+                            <a href="#" class="btn-call btn-video text-black" onclick="openModal('Book a Video Call')">
+                                <i class="fas fa-video me-2"></i> Book a Video Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal-overlay" id="modalOverlay" style="z-index: 9999;">
+                <div class="modal-content">
+                
+                    <div class="form-container position-relative bg-1">
+                        <div class="form-body">
+                            <h4 id="modalTitle" class="text-center active mb-4">Book a Call</h4>
+                            <span class="close-btn active" onclick="closeModal()">&times;</span>
+    
+                            <form id="registrationForm">
+                                <!-- Full Name -->
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="fullName" class="form-label required-field">
+                                                Full Name <span class="hindi-text">/ पूरा नाम</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="fullName" placeholder="Your name / आपका नाम"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+            
+                                        <!-- Date of Birth -->
+                                        <div class="form-group">
+                                            <label for="dateOfBirth" class="form-label required-field">
+                                                Date of Birth <span class="hindi-text">/ जन्म की तारीख</span>
+                                            </label>
+                                            <input type="date" class="form-control" id="dateOfBirth" required>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Place of Birth -->
+                                    <div class="col-lg-6">
+            
+                                        <div class="form-group">
+                                            <label for="placeOfBirth" class="form-label required-field">
+                                                Place of Birth <span class="hindi-text">/ जन्म स्थान</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="placeOfBirth"
+                                                placeholder="Your place of birth / आपका जन्म स्थान" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+            
+                                        <div class="form-group">
+                                            <label for="contactNumber" class="form-label required-field">
+                                                Contact Number <span class="hindi-text">/ संपर्क नंबर</span>
+                                            </label>
+                                            <input type="tel" class="form-control" id="contactNumber"
+                                                placeholder="Your contact number / आपका संपर्क नंबर" required>
+                                        </div>
+                                    </div>
+                                </div>
+                             
+            
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label for="email" class="form-label">
+                                        Do you have email that can be used for follow-up? <span class="hindi-text">/ क्या आपके
+                                            पास
+                                            फॉलो-अप के लिए इस्तेमाल किया जा सकने वाला ईमेल है?</span>
+                                    </label>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="Your email (optional) / आपका ईमेल (वैकल्पिक)">
+                                </div>
+                              
+                               
+            
+                                <!-- Submit Button -->
+                                <div class="form-group w-auto">
+                                    <button type="submit" class="btn">
+                                        Submit
+                                    </button>
+    
+                                </div>
+    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 
+    
+    <div class="section">
+        <div class="container">
+            <div class="heading-section text-center">
+                <h2>Vedic Astrology Solutions </h2>
+                <img src="/img/1.png" class="img-fluid">
+                <p>Discover the power of Vedic astrology to guide your life decisions, solve problems, and align with
+                    cosmic energies for a prosperous future. </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/1.png" alt="Janam Kundli">
+                        <h5>Janam Kundli</h5>
+                        <p>Know what’s coming in your life based on your birth chart. Recommended for new born children.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/2.png" alt="Kundli Matching">
+                        <h5>Kundli Matching</h5>
+                        <p>Know whether the partner you are planning is good for your life based on your stars or not?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/3.png" alt="Vastu for Home">
+                        <h5>Vastu for Home</h5>
+                        <p>Plan your house and office following the vastu tips to have the positive energies.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/4.png" alt="Relationship Problem">
+                        <h5>Relationship Problem</h5>
+                        <p>Trouble in love life? Solve them with the best astrologer in India.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/5.png" alt="Health Issues">
+                        <h5>Health Issues</h5>
+                        <p>Continuous health issues? Vedic remedies can ease the pain.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/6.png" alt="Business Astrology">
+                        <h5>Business Astrology</h5>
+                        <p>Want to grow your business? Contact the best astrologer in India.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/7.png" alt="All Vedic Pooja">
+                        <h5>All Vedic Pooja</h5>
+                        <p>Vedic rituals done the right way with a practiced pandit ji.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="vedic-card">
+                        <img src="img/vedic-astrology/8.png" alt="Career Consultation">
+                        <h5>Career Consultation</h5>
+                        <p>Choose the career path as per your stars to ensure success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="section">
         <div class="container">
@@ -658,132 +853,6 @@
             </div>
         </div>
     </div>
-    <div class="section">
-        <div class="container">
-            <div class="heading-section text-center">
-                <h2>Vedic Astrology Solutions </h2>
-                <img src="/img/1.png" class="img-fluid">
-                <p>Discover the power of Vedic astrology to guide your life decisions, solve problems, and align with
-                    cosmic energies for a prosperous future. </p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/1.png" alt="Janam Kundli">
-                        <h5>Janam Kundli</h5>
-                        <p>Know what’s coming in your life based on your birth chart. Recommended for new born children.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/2.png" alt="Kundli Matching">
-                        <h5>Kundli Matching</h5>
-                        <p>Know whether the partner you are planning is good for your life based on your stars or not?
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/3.png" alt="Vastu for Home">
-                        <h5>Vastu for Home</h5>
-                        <p>Plan your house and office following the vastu tips to have the positive energies.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/4.png" alt="Relationship Problem">
-                        <h5>Relationship Problem</h5>
-                        <p>Trouble in love life? Solve them with the best astrologer in India.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/5.png" alt="Health Issues">
-                        <h5>Health Issues</h5>
-                        <p>Continuous health issues? Vedic remedies can ease the pain.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/6.png" alt="Business Astrology">
-                        <h5>Business Astrology</h5>
-                        <p>Want to grow your business? Contact the best astrologer in India.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/7.png" alt="All Vedic Pooja">
-                        <h5>All Vedic Pooja</h5>
-                        <p>Vedic rituals done the right way with a practiced pandit ji.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="vedic-card">
-                        <img src="img/vedic-astrology/8.png" alt="Career Consultation">
-                        <h5>Career Consultation</h5>
-                        <p>Choose the career path as per your stars to ensure success.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="container">
-            <div class="heading-section text-center mb-4">
-                <h2>Our Gallery</h2>
-                <img src="/img/1.png" class="img-fluid">
-                <p>Explore our collection of mystical moments and spiritual ceremonies captured through the lens of
-                    Vedic traditions.</p>
-            </div>
-
-            <!-- Swiper Container -->
-            <div class="swiper gallery-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="img/gallery/1-4.png" data-fancybox="gallery">
-                            <img src="img/gallery/1-4.png" class="img-fluid" alt="Image 1">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="img/gallery/2-3.png" data-fancybox="gallery">
-                            <img src="img/gallery/2-3.png" class="img-fluid" alt="Image 2">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="img/gallery/2-4.png" data-fancybox="gallery">
-                            <img src="img/gallery/2-4.png" class="img-fluid" alt="Image 3">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="img/gallery/3-3.png" data-fancybox="gallery">
-                            <img src="img/gallery/3-3.png" class="img-fluid" alt="Image 4">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="img/gallery/4-3.png" data-fancybox="gallery">
-                            <img src="img/gallery/4-3.png" class="img-fluid" alt="Image 5">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="img/gallery/1-3.png" data-fancybox="gallery">
-                            <img src="img/gallery/1-3.png" class="img-fluid" alt="Image 6">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="img/gallery/1-3-300x200.png" data-fancybox="gallery">
-                            <img src="img/gallery/1-3-300x200.png" class="img-fluid" alt="Image 7">
-                        </a>
-                    </div>
-                </div>
-                <!-- Swiper Navigation Buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-    </div>
-
     <footer>
         <div class="container">
             <div class="row">
@@ -909,9 +978,19 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            Fancybox.bind("[data-fancybox=gallery]", {});
-        });
+       
+
+        function openModal(title) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalOverlay").style.display = "flex";
+            document.body.classList.add("modal-open");
+        }
+
+        function closeModal() {
+            document.getElementById("modalOverlay").style.display = "none";
+            document.body.classList.remove("modal-open");
+        }
+
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>

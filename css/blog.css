@@ -47,6 +47,10 @@ img{
     color: var(--color_warning);
 }
 
+
+
+
+
 .item:hover .plus-icon {
     color: var(--color_warning);
     transform: scale(1.2);
