@@ -81,77 +81,91 @@
             <p>Astro Shivang will get in touch with you within 48 hours after you schedule an appointment.
             </p>
         </div>
+        <div class="d-flex  w-100" style="justify-content: center;">
+            <div class="notice-container">
+                <div class="notice-card">
+                    <div class="notice-header">
+                        <div class="language-toggle">
+                            <button class="language-btn active" onclick="toggleLanguage('english')">English</button>
+                            <button class="language-btn" onclick="toggleLanguage('hindi')">हिंदी</button>
+                        </div>
+                        <div class="notice-header-content">
+                            <div class="notice-icon-wrapper">
+                                <i class="bi bi-exclamation-triangle-fill notice-icon"></i>
+                            </div>
+                            <div>
+                                <h2 class="notice-title">IMPORTANT NOTICE</h2>
+                                <p class="notice-subtitle">Please read carefully before proceeding</p>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class=" notice-container">
-            <div class="notice-card">
-                <div class="notice-header">
-                    <div class="language-toggle">
-                        <button class="language-btn active" onclick="toggleLanguage('english')">English</button>
-                        <button class="language-btn" onclick="toggleLanguage('hindi')">हिंदी</button>
-                    </div>
-                    <div class="notice-header-content">
-                        <div class="notice-icon-wrapper">
-                            <i class="bi bi-exclamation-triangle-fill notice-icon"></i>
+                    <div class="notice-body">
+                        <div id="english-content" class="notice-content english-content">
+                            <div class="notice-point">
+                                <i class="bi bi-info-circle-fill point-icon"></i>
+                                <p class="point-text"><span class="highlight">Dakshina, or the astrology fee</span> is a
+                                    Vedic tradition. Please note that <span class="highlight">this is not a free
+                                        service</span>.</p>
+                            </div>
+
+                            <div class="notice-divider"></div>
+
+                            <div class="notice-point">
+                                <i class="bi bi-calendar-check point-icon"></i>
+                                <p class="point-text">Once you fill the form, Astro Shivang Ji will make your Kundali
+                                    and
+                                    contact you on the given phone number within 48 hours.</p>
+                            </div>
+
+                            <div class="notice-divider"></div>
+
+                            <div class="notice-point">
+                                <i class="bi bi-currency-rupee point-icon"></i>
+                                <p class="point-text">Based on your asked astrology services, Astro Shivang Ji will
+                                    decide
+                                    Dakshina amount and ask you to pay the same online.</p>
+                            </div>
                         </div>
-                        <div>
-                            <h2 class="notice-title">IMPORTANT NOTICE</h2>
-                            <p class="notice-subtitle">Please read carefully before proceeding</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="notice-body">
-                    <div id="english-content" class="notice-content english-content">
-                        <div class="notice-point">
-                            <i class="bi bi-info-circle-fill point-icon"></i>
-                            <p class="point-text"><span class="highlight">Dakshina, or the astrology fee</span> is a Vedic tradition. Please note that <span class="highlight">this is not a free service</span>.</p>
-                        </div>
-                        
-                        <div class="notice-divider"></div>
-                        
-                        <div class="notice-point">
-                            <i class="bi bi-calendar-check point-icon"></i>
-                            <p class="point-text">Once you fill the form, Astro Shivang Ji will make your Kundali and contact you on the given phone number within 48 hours.</p>
-                        </div>
-                        
-                        <div class="notice-divider"></div>
-                        
-                        <div class="notice-point">
-                            <i class="bi bi-currency-rupee point-icon"></i>
-                            <p class="point-text">Based on your asked astrology services, Astro Shivang Ji will decide Dakshina amount and ask you to pay the same online.</p>
-                        </div>
-                    </div>
-                    
-                    <div id="hindi-content" class="notice-content hindi-content">
-                        <div class="notice-point">
-                            <i class="bi bi-info-circle-fill point-icon"></i>
-                            <p class="point-text"><span class="highlight">दक्षिणा, या ज्योतिष शुल्क</span> एक वैदिक परंपरा है। कृपया ध्यान दें कि <span class="highlight">यह निःशुल्क सेवा नहीं है</span>।</p>
-                        </div>
-                        
-                        <div class="notice-divider"></div>
-                        
-                        <div class="notice-point">
-                            <i class="bi bi-calendar-check point-icon"></i>
-                            <p class="point-text">एक बार जब आप फॉर्म भर देंगे, तो Astro Shivang जी आपकी कुंडली बनाएंगे और 48 घंटे के भीतर दिए गए फोन नंबर पर आपसे संपर्क करेंगे।</p>
-                        </div>
-                        
-                        <div class="notice-divider"></div>
-                        
-                        <div class="notice-point">
-                            <i class="bi bi-currency-rupee point-icon"></i>
-                            <p class="point-text">आपकी पूछी गई ज्योतिष सेवाओं के आधार पर, Astro Shivang जी दक्षिणा राशि तय करेंगे और आपको उसका ऑनलाइन भुगतान करने के लिए कहेंगे।</p>
+
+                        <div id="hindi-content" class="notice-content hindi-content">
+                            <div class="notice-point">
+                                <i class="bi bi-info-circle-fill point-icon"></i>
+                                <p class="point-text"><span class="highlight">दक्षिणा, या ज्योतिष शुल्क</span> एक वैदिक
+                                    परंपरा है। कृपया ध्यान दें कि <span class="highlight">यह निःशुल्क सेवा नहीं
+                                        है</span>।
+                                </p>
+                            </div>
+
+                            <div class="notice-divider"></div>
+
+                            <div class="notice-point">
+                                <i class="bi bi-calendar-check point-icon"></i>
+                                <p class="point-text">एक बार जब आप फॉर्म भर देंगे, तो Astro Shivang जी आपकी कुंडली
+                                    बनाएंगे
+                                    और 48 घंटे के भीतर दिए गए फोन नंबर पर आपसे संपर्क करेंगे।</p>
+                            </div>
+
+                            <div class="notice-divider"></div>
+
+                            <div class="notice-point">
+                                <i class="bi bi-currency-rupee point-icon"></i>
+                                <p class="point-text">आपकी पूछी गई ज्योतिष सेवाओं के आधार पर, Astro Shivang जी दक्षिणा
+                                    राशि
+                                    तय करेंगे और आपको उसका ऑनलाइन भुगतान करने के लिए कहेंगे।</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="notice-footer">
-                    <div class="footer-logo">
-                        <i class="bi bi-stars logo-icon"></i>
-                        <h5 class="logo-text">Astro Shivang</h5>
-                    </div>
-                    <div class="footer-contact">
-                        <i class="bi bi-envelope"></i>
-                        <span>support@astroshivang.com</span>
+
+                    <div class="notice-footer">
+                        <div class="footer-logo">
+                            <i class="bi bi-stars logo-icon"></i>
+                            <h5 class="logo-text">Astro Shivang</h5>
+                        </div>
+                        <div class="footer-contact">
+                            <i class="bi bi-envelope"></i>
+                            <span>support@astroshivang.com</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -160,45 +174,77 @@
             <div class="form-body">
                 <form id="registrationForm">
                     <!-- Full Name -->
-                    <div class="form-group">
-                        <label for="fullName" class="form-label required-field">
-                            Full Name <span class="hindi-text">/ पूरा नाम</span>
-                        </label>
-                        <input type="text" class="form-control" id="fullName" placeholder="Your name / आपका नाम" required>
-                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="fullName" class="form-label required-field">
+                                    Full Name <span class="hindi-text">/ पूरा नाम</span>
+                                </label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Your name / आपका नाम"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
 
-                    <!-- Date of Birth -->
-                    <div class="form-group">
-                        <label for="dateOfBirth" class="form-label required-field">
-                            Date of Birth <span class="hindi-text">/ जन्म की तारीख</span>
-                        </label>
-                        <input type="date" class="form-control" id="dateOfBirth" required>
-                    </div>
+                            <!-- Date of Birth -->
+                            <div class="form-group">
+                                <label for="dateOfBirth" class="form-label required-field">
+                                    Date of Birth <span class="hindi-text">/ जन्म की तारीख</span>
+                                </label>
+                                <input type="date" class="form-control" id="dateOfBirth" required>
+                            </div>
+                        </div>
 
-                    <!-- Place of Birth -->
-                    <div class="form-group">
-                        <label for="placeOfBirth" class="form-label required-field">
-                            Place of Birth <span class="hindi-text">/ जन्म स्थान</span>
-                        </label>
-                        <input type="text" class="form-control" id="placeOfBirth" placeholder="Your place of birth / आपका जन्म स्थान" required>
-                    </div>
+                        <!-- Place of Birth -->
+                        <div class="col-lg-6">
 
-                    <!-- Gender -->
+                            <div class="form-group">
+                                <label for="placeOfBirth" class="form-label required-field">
+                                    Place of Birth <span class="hindi-text">/ जन्म स्थान</span>
+                                </label>
+                                <input type="text" class="form-control" id="placeOfBirth"
+                                    placeholder="Your place of birth / आपका जन्म स्थान" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <div class="form-group">
+                                <label for="contactNumber" class="form-label required-field">
+                                    Contact Number <span class="hindi-text">/ संपर्क नंबर</span>
+                                </label>
+                                <input type="tel" class="form-control" id="contactNumber"
+                                    placeholder="Your contact number / आपका संपर्क नंबर" required>
+                            </div>
+                        </div>
+                    </div>
+                 
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            Do you have email that can be used for follow-up? <span class="hindi-text">/ क्या आपके
+                                पास
+                                फॉलो-अप के लिए इस्तेमाल किया जा सकने वाला ईमेल है?</span>
+                        </label>
+                        <input type="email" class="form-control" id="email"
+                            placeholder="Your email (optional) / आपका ईमेल (वैकल्पिक)">
+                    </div>
                     <div class="form-group">
                         <label class="form-label required-field">
                             Gender <span class="hindi-text">/ लिंग</span>
                         </label>
                         <div class="d-flex gap-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="male"
+                                    required>
                                 <label class="form-check-label" for="male">
-                                    Male 
+                                    Male
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gender" id="female" value="female">
                                 <label class="form-check-label" for="female">
-                                    Female 
+                                    Female
                                 </label>
                             </div>
                             <div class="form-check">
@@ -209,39 +255,25 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Contact Number -->
-                    <div class="form-group">
-                        <label for="contactNumber" class="form-label required-field">
-                            Contact Number <span class="hindi-text">/ संपर्क नंबर</span>
-                        </label>
-                        <input type="tel" class="form-control" id="contactNumber" placeholder="Your contact number / आपका संपर्क नंबर" required>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group">
-                        <label for="email" class="form-label">
-                            Do you have email that can be used for follow-up? <span class="hindi-text">/ क्या आपके पास फॉलो-अप के लिए इस्तेमाल किया जा सकने वाला ईमेल है?</span>
-                        </label>
-                        <input type="email" class="form-control" id="email" placeholder="Your email (optional) / आपका ईमेल (वैकल्पिक)">
-                    </div>
-
                     <!-- Preferred Language -->
                     <div class="form-group">
                         <label class="form-label required-field">
-                            Preferred Language for Communication <span class="hindi-text">/ संचार के लिए पसंदीदा भाषा</span>
+                            Preferred Language for Communication <span class="hindi-text">/ संचार के लिए पसंदीदा
+                                भाषा</span>
                         </label>
                         <div class="d-flex gap-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="preferredLanguage" id="english" value="english" required>
+                                <input class="form-check-input" type="radio" name="preferredLanguage" id="english"
+                                    value="english" required>
                                 <label class="form-check-label" for="english">
-                                    English 
+                                    English
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="preferredLanguage" id="hindi" value="hindi">
+                                <input class="form-check-input" type="radio" name="preferredLanguage" id="hindi"
+                                    value="hindi">
                                 <label class="form-check-label" for="hindi">
-                                    Hindi 
+                                    Hindi
                                 </label>
                             </div>
                         </div>
@@ -254,25 +286,29 @@
                         </label>
                         <div class="areas-container">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="health" value="health">
+                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="health"
+                                    value="health">
                                 <label class="form-check-label" for="health">
                                     Health <span class="hindi-text">/ स्वास्थ्य</span>
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="career" value="career">
+                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="career"
+                                    value="career">
                                 <label class="form-check-label" for="career">
                                     Career <span class="hindi-text">/ करियर</span>
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="family" value="family">
+                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="family"
+                                    value="family">
                                 <label class="form-check-label" for="family">
                                     Family <span class="hindi-text">/ परिवार</span>
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="other-concern" value="other">
+                                <input class="form-check-input" type="checkbox" name="areasOfConcern" id="other-concern"
+                                    value="other">
                                 <label class="form-check-label" for="other-concern">
                                     Other <span class="hindi-text">/ अन्य</span>
                                 </label>
@@ -280,10 +316,12 @@
                         </div>
                     </div>
 
+                   
+
                     <!-- Submit Button -->
                     <div class="form-group w-auto">
                         <button type="submit" class="btn">
-                            Submit 
+                            Submit
                         </button>
                     </div>
                 </form>
@@ -419,9 +457,9 @@
             const englishContent = document.getElementById('english-content');
             const hindiContent = document.getElementById('hindi-content');
             const buttons = document.querySelectorAll('.language-btn');
-            
+
             buttons.forEach(btn => btn.classList.remove('active'));
-            
+
             if (language === 'english') {
                 englishContent.style.display = 'block';
                 hindiContent.style.display = 'none';
