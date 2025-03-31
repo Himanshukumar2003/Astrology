@@ -1,3 +1,5 @@
+
+
 function scroll() { 
     var nav = document.getElementById("navbar"); 
 
@@ -17,6 +19,42 @@ function scroll() {
 scroll();
 
 
+const swiperTwo = new Swiper('.reviews-swiper', {
+    // Optional parameters
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 2.5,
+      },
+    },
+    
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: false,
+    },
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  
 var swiper = new Swiper(".gallery-slider", {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -76,5 +114,7 @@ $(document).ready(function () {
         }, 200);
     });
 });
+
+
 
 
