@@ -18,6 +18,17 @@ function scroll() {
 
 scroll();
 
+function openModal(title) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalOverlay").style.display = "flex";
+    document.body.classList.add("modal-open");
+}
+
+function closeModal() {
+    document.getElementById("modalOverlay").style.display = "none";
+    document.body.classList.remove("modal-open");
+}
+
 
 const swiperTwo = new Swiper('.reviews-swiper', {
     // Optional parameters
