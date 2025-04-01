@@ -138,13 +138,7 @@ p {
     .navbar-collapse {
         padding-top: 10px;
     }
-    .navbar{
-        background-color: white;
-    }
-   .navbar .nav-link{
-        color: var(--color_black);
-    }
-
+    
     .navbar-nav .nav-item {
         border-bottom: 1px solid #eee;
         padding: 10px 0;
@@ -199,6 +193,19 @@ p {
 
 .navbar-toggler-icon, .navbar-toggler{
     color: var(--color_warning);
+}
+@media (max-width: 991.98px) {
+    .navbar.scrolled {
+        background-color: white !important;
+    }
+
+    .navbar.scrolled .nav-link {
+        color: black !important;
+    }
+
+    .navbar.scrolled .navbar-toggler-icon {
+        filter: invert(1);
+    }
 }
 
 
