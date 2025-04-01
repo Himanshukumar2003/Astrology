@@ -5,10 +5,8 @@ function scroll() {
 
     function scrollNav() {
         if (window.scrollY > 100) {
-            nav.style.backgroundColor = "white";
             nav.classList.add("scrolled"); 
         } else {
-            nav.style.backgroundColor = "transparent";
             nav.classList.remove("scrolled"); 
         }
     }
