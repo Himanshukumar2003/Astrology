@@ -134,29 +134,7 @@ p {
 
 
 /* Mobile navigation */
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        padding-top: 10px;
-    }
-    
-    .navbar-nav .nav-item {
-        border-bottom: 1px solid #eee;
-        padding: 10px 0;
-    }
-    
-    .navbar-nav .nav-item:last-child {
-        border-bottom: none;
-    }
-    
-    .navbar-toggler {
-        border: none;
-        padding: 0;
-    }
-    
-    .navbar-toggler:focus {
-        box-shadow: none;
-    }
-}
+
 
 .navbar {
     position: fixed;
@@ -195,11 +173,11 @@ p {
     color: var(--color_warning);
 }
 @media (max-width: 991.98px) {
-    .navbar.scrolled {
+    .navbar ,.scrolled {
         background-color: white !important;
     }
 
-    .navbar.scrolled .nav-link {
+     .nav-link {
         color: black !important;
     }
 
