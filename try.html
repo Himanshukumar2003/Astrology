@@ -2,49 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Astro Shivang</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            text-align: center;
+            overflow: hidden;
+        }
+        .text-container {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .letter {
+            opacity: 0;
+            display: inline-block;
+            animation: fadeIn 0.05s forwards;
+        }
+        .line {
+            display: inline-block;
+            width: 2px;
+            height: 24px;
+            background-color: #333;
+            animation: blink 0.5s infinite alternate;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
 </head>
-<body >
-    <!-- Journey Section -->
-    <section id="journey" class="py-5 bg-warning bg-opacity-25">
-        <div class="container text-center">
-            <h3>Spiritual Journey</h3>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card p-3">
-                        
-                        <p>Born in Jind, Haryana in 1997, Gurudev undertook religious responsibilities after performing the sacred thread ceremony of Janeu.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-3">
-                        <div class="d-flex align-items-center gap-2 mb-2">
-                            <i class="bi bi-mortarboard-fill text-warning"></i>
-                            <h5 class="mb-0">Education</h5>
-                        </div>
-                        <p>Graduated in Sanskrit from Kurukshetra University and later gained the title of 'Acharya' from Banaras Hindu University.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<body>
+    <div class="text-container" id="text"></div>
+    
+    <script>
+        const texts = [
+            "8 out of 10 candidates got job within their first 4 interviews.",
+            "Private sector bank in India have grown at over 15% annually.",
+            "There are over 200 different job profiles in banking.",
+            "India has the highest number of bank branches (126337) in the world.",
+            "By 2030, SkillY will train over 5 Lakh students."
+        ];
 
-    <!-- Services Section -->
-  
+        let index = 0;
 
-    <!-- Quote Section -->
-   
+        function showText() {
+            if (index >= texts.length) index = 0;
+            let container = document.getElementById("text");
+            container.innerHTML = ""; 
+            let text = texts[index];
+            
+            text.split("").forEach((char, i) => {
+                let span = document.createElement("span");
+                span.textContent = char;
+                span.classList.add("letter");
+                span.style.animation = `fadeIn 0.05s forwards ${i * 50}ms`;
+                container.appendChild(span);
+            });
+            
+            let line = document.createElement("span");
+            line.classList.add("line");
+            container.appendChild(line);
+            
+            setTimeout(() => {
+                fadeOutText(container, () => {
+                    index++;
+                    showText();
+                });
+            }, text.length * 50 + 2000);
+        }
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Astro Shivang. All rights reserved.</p>
-        </div>
-    </footer>
+        function fadeOutText(container, callback) {
+            let letters = container.querySelectorAll(".letter");
+            letters.forEach((letter, i) => {
+                letter.style.animation = `fadeOut 0.05s forwards ${i * 50}ms`;
+            });
+            
+            setTimeout(callback, letters.length * 50 + 500);
+        }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        showText();
+    </script>
 </body>
 </html>
