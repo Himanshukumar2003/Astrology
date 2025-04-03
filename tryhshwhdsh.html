@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .ml11 {
+            font-weight: 700;
+            font-size: 2em;
+            position: relative;
+            width: 80%;
+        }
+        .ml11 .letters {
+            display: inline-block;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="ml11">
+        <span class="text-wrapper">
+            <span class="letters">8 out of 10 candidates got job within their first 4 interviews.</span>
+        </span>
+    </h1>
+    
+    <script>
+        const texts = [
+            "8 out of 10 candidates got job within their first 4 interviews.",
+            "Private sector bank in India have grown at over 15% annually.",
+            "There are over 200 different job profiles in banking.",
+            "India has the highest number of bank branches (126337) in the world.",
+            "By 2030, SkillY will train over 5 Lakh students."
+        ];
+        
+        let index = 0;
+        function animateText() {
+            let textElement = document.querySelector('.ml11 .letters');
+            textElement.innerHTML = texts[index].replace(/([^
