@@ -212,7 +212,7 @@ p {
     display: flex;
     position: relative;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     min-height: 80vh;
     overflow: hidden;
     padding-top: 100px;
