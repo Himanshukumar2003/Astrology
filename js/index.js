@@ -150,3 +150,70 @@ const featuredSwiper = new Swiper('.featured-swiper', {
         }
     }
 });
+
+const video = new Swiper(".videoSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        }
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Video Modal Functionality
+    const videoModal = document.getElementById('videoModal');
+    const videoFrame = document.getElementById('videoFrame');
+    const modalTitle = document.getElementById('videoModalLabel');
+    
+    videoModal.addEventListener('show.bs.modal', function(event) {
+        const button = event.relatedTarget;
+        const videoSrc = button.getAttribute('data-video');
+        const videoTitle = button.getAttribute('data-title');
+        
+        videoFrame.src = videoSrc;
+        modalTitle.textContent = videoTitle;
+    });
+    
+    videoModal.addEventListener('hidden.bs.modal', function() {
+        videoFrame.src = '';
+    });
+    
+    
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter videos
+            videoItems.forEach(item => {
+                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
