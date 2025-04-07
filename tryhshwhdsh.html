@@ -3,168 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrology FAQ Section</title>
+    <title>Article Grid with Swiper</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <style>
         body {
-            font-family: 'Inter', sans-serif;
             background-color: #f8f9fa;
-            padding: 50px 0;
+            font-family: Arial, sans-serif;
         }
         
-        .faq-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .article-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 100%;
+            background-color: #fff;
+            transition: transform 0.3s ease;
         }
         
-        .faq-heading {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+        
+        .article-content {
+            padding: 15px;
+        }
+        
+        .article-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .article-excerpt {
+            font-size: 14px;
+            color: #666;
             margin-bottom: 10px;
+            line-height: 1.5;
         }
         
-        .faq-subheading {
-            color: #555;
+        .article-meta {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
             margin-bottom: 25px;
-            max-width: 90%;
+            position: relative;
+            padding-bottom: 10px;
         }
         
-        .more-faqs {
-            display: inline-block;
-            color: #4B44F0;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #0d6efd;
         }
         
-        .more-faqs:hover {
-            text-decoration: underline;
+        .swiper {
+            padding: 10px 5px 30px;
         }
         
-        .accordion-item {
-            border: none;
-            border-bottom: 1px solid #e5e5e5;
-            margin-bottom: 0;
+        .swiper-pagination {
+            bottom: 0 !important;
         }
         
-        .accordion-button {
-            padding: 20px;
-            font-weight: 600;
-            box-shadow: none !important;
-            background-color: transparent;
+        .swiper-button-next, .swiper-button-prev {
+            color: #0d6efd;
+            background: rgba(255,255,255,0.8);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
-        .accordion-button:not(.collapsed) {
-            color: #000;
-            background-color: transparent;
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 18px;
         }
         
-        .accordion-button:focus {
-            box-shadow: none;
-            border-color: transparent;
+        @media (max-width: 767px) {
+            .article-image {
+                height: 160px;
+            }
         }
         
-        .accordion-body {
-            padding: 0  20px 20px;
-            color: #555;
+        .featured-section {
+            margin-bottom: 40px;
         }
         
-        .accordion-button::after {
-            content: "+";
-            background-image: none;
-            font-size: 1.5rem;
-            font-weight: 300;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-        }
-        
-        .accordion-button:not(.collapsed)::after {
-            content: "−";
-            transform: rotate(0);
-            background-image: none;
+        .regular-grid {
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
-    <div class="container faq-container">
-        <div class="row">
-            <div class="col-lg-5">
-                <h2 class="faq-heading">Any questions?<br>We got you.</h2>
-                <p class="faq-subheading">Your cosmic journey begins with knowledge. We're here to guide you through the celestial mysteries and astrological insights.</p>
-                <a href="#" class="more-faqs">More FAQs <i class="bi bi-arrow-right"></i></a>
-            </div>
-            
-            <div class="col-lg-7">
-                <div class="accordion" id="astrologyFAQ">
-                    <!-- FAQ Item 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                How do birth charts work?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#astrologyFAQ">
-                            <div class="accordion-body">
-                                A birth chart is a celestial snapshot of the sky at the moment you were born. It maps the positions of planets, stars, and cosmic bodies, revealing your unique astrological blueprint. This chart influences your personality traits, strengths, challenges, and life path through the interplay of zodiac signs, houses, and planetary aspects.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                What's the difference between sun, moon, and rising signs?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#astrologyFAQ">
-                            <div class="accordion-body">
-                                Your Sun sign represents your core identity and ego (what most people know as their zodiac sign). Your Moon sign reflects your emotional nature and inner self. Your Rising sign (Ascendant) shows how others perceive you and your outward demeanor. Together, these three signs form the foundation of your astrological profile.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                How can I understand planetary retrogrades?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#astrologyFAQ">
-                            <div class="accordion-body">
-                                Planetary retrogrades occur when a planet appears to move backward from our Earth perspective. Each retrograde affects different aspects of life: Mercury (communication), Venus (relationships), Mars (energy), Jupiter (growth), Saturn (discipline), etc. These periods invite reflection and revision rather than forward movement in the areas governed by that planet.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- FAQ Item 4 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                What are houses in astrology and why do they matter?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#astrologyFAQ">
-                            <div class="accordion-body">
-                                The 12 houses in astrology represent different areas of life: identity (1st), finances (2nd), communication (3rd), home (4th), creativity (5th), health (6th), relationships (7th), transformation (8th), philosophy (9th), career (10th), community (11th), and spirituality (12th). The planets in your chart fall into these houses, showing where their energies manifest in your life.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Featured Swiper
+      
+
+</script>
 </body>
 </html>

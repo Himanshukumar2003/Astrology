@@ -127,3 +127,26 @@ $(document).ready(function () {
 
 
 
+const featuredSwiper = new Swiper('.featured-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+        el: '.featured-swiper .swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.featured-swiper .swiper-button-next',
+        prevEl: '.featured-swiper .swiper-button-prev',
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        }
+    }
+});
