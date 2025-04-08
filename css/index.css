@@ -286,7 +286,6 @@ p {
 .main-img {
     position: absolute;
     left: 50%;
-    border-radius: 180px !important;
     top: 50%;
     transform: translate(-50%, -50%);
 }
